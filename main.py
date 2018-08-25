@@ -3,7 +3,9 @@ from flask import Flask , render_template, request, jsonify
 
 app = Flask(__name__)
 
-
+@app.route("/partners")
+def partners():
+    return render_template("partners.html")
 	
 @app.route("/")
 def home():
