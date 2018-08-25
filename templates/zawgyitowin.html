@@ -1,0 +1,202 @@
+<html>
+    <head>      
+		  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		  <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/materialize.css')}}"  media="screen,projection"/>
+		  <link rel="stylesheet" href="{{url_for('static',filename='css/material.min.css')}}">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		  <script type="text/javascript" src="{{url_for('static',filename='JQuery/jquery.js')}}"></script>
+	<style>				
+			.demo-layout-transparent .mdl-layout__header,.demo-layout-transparent .mdl-layout__drawer-button 
+				{
+					/* This background is dark, so we set text to white. Use 87% black instead if
+					your background is light. */
+					color: white;
+				}
+			#title1
+				{
+					font-size:25px;
+				}
+				.mdl-navigation__link
+				{
+					 color:#000000;
+					 text-decoration:middle;
+					 font-size:18px;
+					 line-height:10px;
+					 letter-spacing:0;
+					 padding-bottom:
+					 padding-top:10px;
+				}
+			nav 
+				{
+					  color: #fff;
+					  background-color:#880e4f;
+					  width: 100%;
+					  height:90px;
+					  line-height:80px;
+				}
+
+			.btn-large
+				{
+					background-color:black;
+				}
+			body 
+				{
+					display: flex;
+					min-height: 100vh;
+					flex-direction: column;
+				}
+			main 
+				{
+					flex: 1 0 auto;
+				}
+			#textarea2,#textarea1
+				{
+					background-color:#e0f2f1 ;
+					-moz-border-radius: 4px;
+					-webkit-border-radius: 4px;
+					border-radius: 4px;
+					overflow:scroll;
+					padding: 20px;
+					border: 1px solid rgba(0,0,0,0.15);
+					-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+					-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+					box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+					height:300px;
+					width:500px;
+				}
+			#button1
+				{
+					margin-left:40px;
+				}
+			#button2
+				{
+					margin-left:390px;
+				}
+			.mdl-mega-footer
+				{
+					background-color:#880e4f;
+				}
+	</style>		
+    <script>
+	
+		$(document).ready(function()
+			{
+			
+			$(".dropdown-trigger").dropdown();
+			
+			});
+			
+			
+		
+		 $(document).ready(function()
+			{
+			
+			$('input#input_text, textarea#textarea2,textarea#textarea1').characterCounter();
+			
+			});
+			
+    </script>
+	</head>
+	<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+		<div class="demo-layout-transparent mdl-layout mdl-js-layout"></div>
+			<ul id="dropdown1" class="dropdown-content">
+				<li><a href="{{url_for('wintouni')}}">Win to Uni</a></li>
+				<li><a href="{{url_for('unitowin')}}">Uni to Win</a></li>
+				<li><a href="{{url_for('unitozawgyi')}}">Uni to Zawgyi</a></li>
+				<li><a href="{{url_for('zawgyitouni')}}">Zawgyi to Uni</a></li>
+				<li><a href="{{url_for('wintozawgyi')}}">Win to Zawgyi</a></li>
+				<li><a href="{{url_for('zawgyitowin')}}">Zawgyi to Win</a></li>	
+		   </ul>
+		   <nav>
+				<div class="nav-wrapper">
+					<a><p id="title1">Myanmar Font converter</a>
+						<ul class="right hide-on-med-and-down">
+							<li><a class="mdl-navigation__link" href="{{url_for('index')}}">Home</a></li>
+							<li><a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">&nbsp;&nbsp;&nbsp; 
+							Zawgyi to Win&nbsp;&nbsp;&nbsp;</a></li>	
+						</ul>
+				</div>
+			</nav>
+			<main class="mdl-layout__content">
+				<div class="page-content"><!-- Your content goes here -->
+					<div class="mdl-layout__tab-panel is-active" id="overview">
+						<div class="mdl-grid">
+							<div class=" mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp">  
+								<div class="mdl-card__supporting-text">
+									<form action="#">
+										<div class="row">
+											<div class="col s6 m6" id="textarea">
+												<textarea id="textarea2"></textarea>
+												<label for="textarea2">zawgyi</label>
+												<br>
+											</div>
+											<div class="col s6 m6">
+												<textarea id="textarea2"></textarea>
+												<label for="textarea2">win</label>
+												<br>
+											</div>
+											<button type="submit" class="waves-effect btn-large z-depth-0"id="button2">Convert</button>
+											<button type="reset" class="waves-effect btn-large z-depth-0" id="button1">Clear</button>
+										</div>
+									</form>	
+								</div> 
+							</div>
+						</div>
+						<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp"></section>		
+					</div>
+					<footer class="mdl-mega-footer">
+						<div class="mdl-mega-footer--middle-section">
+							<div class="mdl-mega-footer--drop-down-section">
+								<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+									<h1 class="mdl-mega-footer--heading">Features</h1>
+									<ul class="mdl-mega-footer--link-list">
+										<li><a href="about.html">About</a></li>
+										<li><a href="terms.html">Terms</a></li>
+										<li><a href="partners.html">Partners</a></li>
+										<li><a href="updates.html">Updates</a></li>
+									</ul>
+							</div>
+							<div class="mdl-mega-footer--drop-down-section">
+								<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+									<h1 class="mdl-mega-footer--heading">Details</h1>
+									<ul class="mdl-mega-footer--link-list">
+										<li><a href="spec.html">Spec</a></li>
+										<li><a href="tools.html">Tools</a></li>
+										<li><a href="resource.html">Resources</a></li>
+									</ul>
+							</div>
+							<div class="mdl-mega-footer--drop-down-section">
+								<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+									<h1 class="mdl-mega-footer--heading">Technology</h1>
+									<ul class="mdl-mega-footer--link-list">
+										<li><a href="howitwork.html">How it works</a></li>
+										<li><a href="patterns.html">Patterns</a></li>
+										<li><a href="usage.html">Usage</a></li>
+										<li><a href="product.html">Products</a></li>
+										<li><a href="contract.html">Contracts</a></li>
+									</ul>
+							</div>
+							<div class="mdl-mega-footer--drop-down-section">
+								<input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+									<h1 class="mdl-mega-footer--heading">FAQ</h1>
+									<ul class="mdl-mega-footer--link-list">
+										<li><a href="questions.html">Questions</a></li>
+										<li><a href="answer.html">Answers</a></li>
+										<li><a href="contact.html">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-copyright">
+							<div class="container">
+								@ 2018 CUMDY Interns
+								<a class="grey-text text-lighten-4 right">Goe-Hope Team</a>
+							</div>
+						</div>
+			</footer>
+		</div>
+	</main>
+	<script src="{{url_for('static',filename='js/material.min.js')}}" ></script>
+	<script type="text/javascript" src="{{url_for('static',filename='js/materialize.js')}}"></script>
+	</body>
+</html>
