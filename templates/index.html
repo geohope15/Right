@@ -68,15 +68,12 @@
 	</head>
 	<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <!-- Uses a transparent header that draws on top of the layout's background -->
-		<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-		
-        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--pink-900"> 
+		<div class="demo-layout-transparent mdl-layout mdl-js-layout"></div>
+<header class="mdl-layout__header mdl-layout__header--scroll mdl-color--pink-900"> 
           
           <div class="mdl-layout__header-row mdl-layout--small-screen-only"> 
               <span class="mdl-layout-title">Universal Font Converter</span> 
           </div> 
-		  <div class="demo-layout-transparent mdl-layout mdl-js-layout"></div>
-		  <div class="mdl-layout__header-row mdl-layout--small-screen-only">
           <div class="mdl-layout__header-row"> 
               <span class="mdl-layout-title">
 			  <ul id="dropdown1" class="dropdown-content">
@@ -87,8 +84,8 @@
 				<li><a href="{{url_for('wintozawgyi')}}">Win to Zawgyi</a></li>
 				<li><a href="{{url_for('zawgyitowin')}}">Zawgyi to Win</a></li>	
 		   </ul>
-		   <div class="demo-layout-transparent mdl-layout mdl-js-layout"></div>
-		   			<div class="mdl-layout__header-row mdl-layout--small-screen-only">
+		   <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+				
 							<a class="mdl-navigation__link" href="{{url_for('home')}}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">&nbsp;&nbsp;&nbsp; 
 							Unicode to Win &nbsp;&nbsp;&nbsp;</a></li>	
@@ -96,12 +93,10 @@
 				</div>
 			</span> 
          </div> 
-		 </div>
-		 <div class="demo-layout-transparent mdl-layout mdl-js-layout"></div>
       </header> 
 			<main class="mdl-layout__content">
 				<div class="page-content"><!-- Your content goes here -->
-
+					<br>
 					<img src="{{url_for('static',filename='images/cumdy1.jpg')}}" width="100%" height="400px">	
 					
 					<footer class="mdl-mega-footer">
