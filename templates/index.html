@@ -102,7 +102,7 @@
 			<div class="mdl-layout__header-row mdl-layout--small-screen-only mdl-color--blue"> 
               <span class="mdl-layout-title">Universal Font Converter</span> 
           </div> 
-          <div class="mdl-layout__header-row"> 
+          <div class="mdl-layout__header-row left"> 
               
 			  <ul id="dropdown1" class="dropdown-content">
 				<li><a href="{{url_for('wintouni')}}">Win to Uni</a></li>
@@ -113,9 +113,11 @@
 				<li><a href="{{url_for('zawgyitowin')}}">Zawgyi to Win</a></li>	
 		   </ul>
 		   <div class="mdl-layout--large-screen-only mdl-layout__header-row mdl-color--blue" id="hello">
-				 		   <a class="mdl-navigation__link" href="{{url_for('home')}}">Home</a>
+			   <span tilte="mdl-layout-title">
+				 		   <a class="mdl-navigation__link left" href="{{url_for('home')}}">Home</a>
 							<a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1"> 
-							Choose &nbsp;&nbsp;&nbsp;</a></li>	
+							Choose &nbsp;&nbsp;&nbsp;</a>	
+			   </span>
 						
 				</div>
 			
