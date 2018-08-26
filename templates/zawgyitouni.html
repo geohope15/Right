@@ -120,17 +120,22 @@
           </div> 
           <div class="mdl-layout__header-row"> 
               <span class="mdl-layout-title">
-			  <ul id="dropdown1" class="dropdown-content">
+			  			  <ul id="dropdown1" class="dropdown-content">
 				<li><a href="{{url_for('wintouni')}}">Win to Uni</a></li>
+				<li class="divider"></li>
 				<li><a href="{{url_for('unitowin')}}">Uni to Win</a></li>
+				<li class="divider"></li>
 				<li><a href="{{url_for('unitozawgyi')}}">Uni to Zawgyi</a></li>
+				<li class="divider"></li>
 				<li><a href="{{url_for('zawgyitouni')}}">Zawgyi to Uni</a></li>
+				<li class="divider"></li>
 				<li><a href="{{url_for('wintozawgyi')}}">Win to Zawgyi</a></li>
+				<li class="divider"></li>
 				<li><a href="{{url_for('zawgyitowin')}}">Zawgyi to Win</a></li>	
 		   </ul>
 		   <div class="mdl-layout--large-screen-only mdl-layout__header-row mdl-color--blue" id="hello">
 				 		   <a class="mdl-navigation__link" href="{{url_for('home')}}">Home</a>
-							<a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">
+							<a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">&nbsp;&nbsp;&nbsp;
 							Zawgyi to Uni  &nbsp;&nbsp;&nbsp;</a></li>	
 						
 				</div>
