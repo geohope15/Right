@@ -12,10 +12,10 @@
 					your background is light. */
 					color: white;
 				}
-
-
-
-				
+			#title1
+				{
+					font-size:25px;
+				}
 				.mdl-navigation__link
 				{
 					 color:#000000;
@@ -26,14 +26,8 @@
 					 padding-bottom:
 					 padding-top:10px;
 				}
-			nav 
-				{
-					  color: #fff;
-					  background-color:#880e4f;
-					  width: 100%;
-					  height:90px;
-					  line-height:80px;
-				}
+				 
+			
 			body 
 				{
 					display: flex;
@@ -43,11 +37,14 @@
 			main 
 				{
 					flex: 1 0 auto;
-			}
+				}
+			
+			
 			.mdl-mega-footer
 				{
 					background-color:#880e4f;
 				}
+				
 	</style>		
     <script>
 	
@@ -72,7 +69,14 @@
 	<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <!-- Uses a transparent header that draws on top of the layout's background -->
 		<div class="demo-layout-transparent mdl-layout mdl-js-layout"></div>
-			<ul id="dropdown1" class="dropdown-content">
+<header class="mdl-layout__header mdl-layout__header--scroll mdl-color--pink-900"> 
+          
+          <div class="mdl-layout__header-row mdl-layout--small-screen-only"> 
+              <span class="mdl-layout-title">Universal Font Converter</span> 
+          </div> 
+          <div class="mdl-layout__header-row"> 
+              <span class="mdl-layout-title">
+			  <ul id="dropdown1" class="dropdown-content">
 				<li><a href="{{url_for('wintouni')}}">Win to Uni</a></li>
 				<li><a href="{{url_for('unitowin')}}">Uni to Win</a></li>
 				<li><a href="{{url_for('unitozawgyi')}}">Uni to Zawgyi</a></li>
@@ -80,18 +84,16 @@
 				<li><a href="{{url_for('wintozawgyi')}}">Win to Zawgyi</a></li>
 				<li><a href="{{url_for('zawgyitowin')}}">Zawgyi to Win</a></li>	
 		   </ul>
-		   <nav>
 		   <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-				<div class="nav-wrapper">
-					<a><p id="title1">Myanmar Font converter</a>
-						<ul class="right hide-on-med-and-down">
-							<li><a class="mdl-navigation__link" href="{{url_for('home')}}">Home</a></li>
-							<li><a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">&nbsp;&nbsp;&nbsp; 
-							choose font&nbsp;&nbsp;&nbsp;</a></li>	
-						</ul>
+				
+							<a class="mdl-navigation__link" href="{{url_for('home')}}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">&nbsp;&nbsp;&nbsp; 
+							Unicode to Win &nbsp;&nbsp;&nbsp;</a></li>	
+						
 				</div>
-			</nav>
-			</div>
+			</span> 
+         </div> 
+      </header> 
 			<main class="mdl-layout__content">
 				<div class="page-content"><!-- Your content goes here -->
 					<br>
