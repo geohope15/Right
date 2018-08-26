@@ -15,6 +15,10 @@ def about():
 def home():
     return render_template("index.html")
 
+@app.roue("howitwork")
+def howitwork():
+    return render_template("howitwork.html")
+
 @app.route("/unitowin")
 def unitowin():
     return render_template("unitowin.html")
