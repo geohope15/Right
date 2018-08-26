@@ -40,7 +40,14 @@
 					flex: 1 0 auto;
 				}
 			
-			
+			.mdl-layout__header-row
+				{
+				display:-webkit-flex;display:-ms-flexbox;
+				display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;
+				flex-direction:row;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;box-sizing:border-box;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:64px;margin:0;
+				padding:0 0px 0 0px;
+				background-color:#03a9f4;
+				}
 			
 				#hello
 				{
@@ -100,10 +107,10 @@
 
 			<main class="mdl-layout__content">
 			<div class="mdl-layout__header-row mdl-layout--small-screen-only mdl-color--blue"> 
-              <span class="mdl-layout-title left">Universal Font Converter</span> 
-          </div>
-        <div class="mdl-layout__header-row left"> 
-              
+              <span class="mdl-layout-title">Universal Font Converter</span> 
+          </div> 
+          <div class="mdl-layout__header-row"> 
+              <span class="mdl-layout-title">
 			  <ul id="dropdown1" class="dropdown-content">
 				<li><a href="{{url_for('wintouni')}}">Win to Uni</a></li>
 				<li><a href="{{url_for('unitowin')}}">Uni to Win</a></li>
@@ -113,14 +120,12 @@
 				<li><a href="{{url_for('zawgyitowin')}}">Zawgyi to Win</a></li>	
 		   </ul>
 		   <div class="mdl-layout--large-screen-only mdl-layout__header-row mdl-color--blue" id="hello">
-			   <span tilte="mdl-layout-title">
 				 		   <a class="mdl-navigation__link" href="{{url_for('home')}}">Home</a>
 							<a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1"> 
-							Choose &nbsp;&nbsp;&nbsp;</a>	
-			   </span>
+							Zawgyi to Win  &nbsp;&nbsp;&nbsp;</a></li>	
 						
-			</div>
-			
+				</div>
+			</span> 
          </div> 
 				<div class="page-content"><!-- Your content goes here -->
 					
