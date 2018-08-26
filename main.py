@@ -15,7 +15,7 @@ def about():
 def home():
     return render_template("index.html")
 
-@app.roue("howitwork")
+@app.route("howitwork")
 def howitwork():
     return render_template("howitwork.html")
 
